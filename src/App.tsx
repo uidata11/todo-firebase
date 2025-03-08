@@ -15,13 +15,11 @@ const App: React.FC = () => {
     };
     setTodos((p) => [...p, newTodo]);
   };
-
   const todoDelete = (id: number) => {
     if (window.confirm("정말 삭제하시겠습니까?")) {
       setTodos((p) => p.filter((todo) => todo.id !== id));
     }
   };
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
