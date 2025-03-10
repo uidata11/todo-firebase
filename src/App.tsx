@@ -20,11 +20,15 @@ const App: React.FC = () => {
       setTodos((p) => p.filter((todo) => todo.id !== id));
     }
   };
+
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
   }, []);
+
+
 
   return (
     <>
@@ -48,7 +52,7 @@ const App: React.FC = () => {
         <div className={twMerge("bg-yellow-500")}>
           <div
             className={twMerge(
-              "p-35 w-max h-screen mr-auto ml-auto bg-gray-300 rounded-2xl"
+              "p-35 w-max h-screen mr-auto ml-auto bg-gray-100 rounded-2xl"
             )}
           >
             <h1
